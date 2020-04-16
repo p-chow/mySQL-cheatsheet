@@ -30,7 +30,7 @@ SELECT c1, c2
 ```
                   
 selecting distinct and not null: 
-``
+```
 SELECT DISTINCT c1, c2 
   FROM tableName 
     WHERE c1 IS NOT NULL 
