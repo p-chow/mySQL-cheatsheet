@@ -5,7 +5,7 @@ BT2102 sem 2
 Defining constraints on col/ table: 
 'CHECK (SearchCondition)' eg. SEX CHAR NOT NULL CHECK (sex IN('M', 'F'))
 
-####Creating/ dropping domain:
+#### Creating/ dropping domain:
 '''
 CREATE DOMAIN domainName [AS] datatype
  [DEFAULT defaultOption]
@@ -15,11 +15,11 @@ CREATE DOMAIN domainName [AS] datatype
 RESTRICT: if domain is used in existing table, drop fails
 CASCADE: table columns dependent on domain will use underlying data type, domain consntraints replaced by column constraints
 
-####Primary Key
+#### Primary Key
 define pri key: 'PRIMARY KEY (attributeName)'
 composite primary key: 'PRIMARY KEY (key1, key2)'
 
-##aggregate functions
+## aggregate functions
 
 selecting **max** : 
 '''
