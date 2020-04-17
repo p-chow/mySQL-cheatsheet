@@ -39,11 +39,17 @@ SELECT DISTINCT c1, c2
 
 #### calculated fields
 `SELECT salary/12 AS monthSalary`
+
 `SELECT SUM(priceeach*quantityOrdered) AS total`
+
 `WHERE amount > (SELECT AVG(amount) FROM payments)`
+
 `WHERE rental_date + INTERVAL f.rental_duration DAY < CURRENT_DATE()`
+
 `WHERE p.amount = (SELECT MAX(amount) FROM payment)`
+
 `WHERE Rental = (SELECT MAX (COUNT (DISTINCT r.rental_id) Rental) FROM rental)`
+
 
 ## WHERE 
 #### BETWEEN/ NOT BETWEEN
