@@ -14,6 +14,7 @@ CREATE DOMAIN domainName [AS] datatype
 `DROP DOMAIN DomainName [RESTRICT|CASCADE]`
 
 RESTRICT: if domain is used in existing table, drop fails
+
 CASCADE: table columns dependent on domain will use underlying data type, domain consntraints replaced by column constraints
 
 ### Primary Key
