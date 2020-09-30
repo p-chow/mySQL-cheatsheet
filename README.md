@@ -1,22 +1,24 @@
 # mySQL-cheatsheet
-BT2102 sem 2
+BT2102
 
-## Integrity Control
+### Integrity Control
 Defining constraints on col/ table: 
 `CHECK (SearchCondition)` eg. SEX CHAR NOT NULL CHECK (sex IN('M', 'F'))
 
-#### Creating/ dropping domain:
+### Creating/ dropping domain:
 ```
 CREATE DOMAIN domainName [AS] datatype
  [DEFAULT defaultOption]
   [CHECK (SearchCondition)]
 ```
 `DROP DOMAIN DomainName [RESTRICT|CASCADE]`
+
 RESTRICT: if domain is used in existing table, drop fails
 CASCADE: table columns dependent on domain will use underlying data type, domain consntraints replaced by column constraints
 
-#### Primary Key
+### Primary Key
 define pri key: `PRIMARY KEY (attributeName)`
+
 composite primary key: `PRIMARY KEY (key1, key2)`
 
 
@@ -45,6 +47,7 @@ SELECT DISTINCT c1, c2
 `WHERE amount > (SELECT AVG(amount) FROM payments)`
 
 `WHERE rental_date + INTERVAL f.rental_duration DAY < CURRENT_DATE()`
+> calculated date fields
 
 `WHERE p.amount = (SELECT MAX(amount) FROM payment)`
 
@@ -111,6 +114,7 @@ join only rows with matching value: no NULL
 ```
 INNER JOIN (SELECT CONCAT(first_name, ', ', last_name) AS actor, actor_id, film_id 
                 FROM film_actor 
-                     INNER JOIN actor USING (actor_id)) c USING (film_id)
+                     INNER JOIN actor USING (actor_id)) c 
+         USING (film_id)
 ```
 
